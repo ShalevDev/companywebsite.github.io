@@ -1,0 +1,237 @@
+html{
+    font-size:16px;
+}
+
+body{
+    margin:0;
+}
+
+/* ====== Header ====== */
+
+header {
+    display: grid;
+    grid-template-columns: min-content 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    box-sizing: content-box;
+    width: 100%;
+    position: fixed;
+    height: 4rem;
+    align-items: center;
+    padding: 0.5rem;
+    z-index: 1;
+    background-color: rgb(48 48 48);
+}
+
+header img{
+    width:auto;
+    height: 100%;
+}
+
+header span {
+    margin-left: 6%;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 2.5rem;
+    font-style: italic;
+    color:white;
+}
+header ul {
+    display: flex;
+    list-style-type: none;
+    float: right;
+    grid-column-start: 4;
+    justify-self: center;
+    padding: 0;
+    width: 38rem;
+    justify-content: space-evenly;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.5rem;
+    color:white;
+}
+
+/* ====== Main ====== */
+main {
+    margin-top: 4.5rem;
+    background-image: url('../images/main-background.jpg');
+    background-size: 100% auto;
+    width: 100%;
+    height: 41vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    display: inline-grid;
+    grid-template-columns: 1fr 12fr 6fr;
+}
+main span {
+    font-size: 3.5rem;
+    grid-column-start: 2;
+    color: white;
+    position: relative;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+main::before {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    content: "";
+    background-color: #0000009c;
+    width: 100%;
+    height: 41vw;
+    margin-top: 4.5rem;
+}
+
+/* ====== Services ====== */
+
+section#Services {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    background-color: #212121;
+}
+.service {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 3%;
+    align-items:center;
+}
+
+.service img {
+    width: 50%;
+    display: block;
+}
+
+.service span {
+    font-size: 2.5rem;
+    margin-top: 3%;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    color: #fefefe;
+}
+
+.img-container#websites{
+    background-image: url('../images/websites.jpg');
+}
+
+
+.img-container#applications{
+    background-image: url('../images/apps.jpg');
+}
+
+
+.img-container#plugins{
+    background-image: url('../images/minecraft.jpg');
+}
+
+.img-container {
+    width: 26vw;
+    height: 21vw;
+    border-radius: 19px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#employees #disclaimer{
+    
+        display: block;
+        color: white;
+    
+}
+
+
+@media only screen and (max-width:768px){
+    .img-container{
+        width:20rem;
+        height:16rem;
+    }
+    main{
+        height:57vh;
+    }
+    main::before{
+        height:57vh;
+    }
+}
+
+@media only screen and (max-width:768px){
+    main{
+        height:45vh;
+        background-size:cover;
+    }
+    main::before{
+        height:45vh;
+    }
+}
+
+@media only screen and (max-width:800px){
+    header ul{
+        display:none;   
+    }
+}
+
+@media only screen and (max-width:1000px){
+    #employees-container .emp-img-container{
+        width:37%;
+        height:40vw;
+        margin: 3%;
+    }
+    #employees-container{
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width:560px){
+    #employees-container .emp-img-container{
+        width: 86%;
+        height: 92vw;
+    }
+    
+}
+
+
+/* ====== Employees ====== */
+
+section#employees {
+    padding-top: 3rem;
+    text-align: center;
+    background-color: #1a1a1a;
+}
+
+section#employees span.title {
+    font-size: 4rem;
+    color: white;
+    position: relative;
+    font-style: italic;
+}
+#employees-container{
+    margin-top: 3rem;
+    display:flex;
+    justify-content: center;
+}
+
+.emp-img-container {
+    width: 100%;
+    height: 21vw;
+    background-size: 100% auto;
+    background-position: center 25%;
+    background-repeat: no-repeat;
+    margin: 25px;
+    
+}
+
+.emp-img-container:nth-child(1){
+    background-image: url('../images/employee-1.jpg');
+}
+.emp-img-container:nth-child(2){
+    background-image: url('../images/employee-2.jpg');
+}
+.emp-img-container:nth-child(3){
+    background-image: url('../images/employee-3.jpg');
+}
+.emp-img-container:nth-child(4){
+    background-image: url('../images/employee-4.jpg');
+}
